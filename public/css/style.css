@@ -1,0 +1,62 @@
+body {
+    background-color: #050505;
+    color: #fff;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+.sw-title {
+    color: #FFE81F;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Estilos do Formulário */
+.input-sw {
+    background: #111;
+    border: 1px solid #FFE81F;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.input-sw:focus {
+    outline: none;
+    box-shadow: 0 0 10px #FFE81F;
+}
+
+.btn-sw {
+    background: #FFE81F;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-sw:hover {
+    background: #fff;
+    box-shadow: 0 0 15px #FFE81F;
+}
+
+/* Estilos dos Cards de Contato */
+.card-sw {
+    background: #111;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.card-sw:hover {
+    border-color: #4facfe;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+}
+
+.card-sw.sith:hover {
+    border-color: #ff0844;
+    box-shadow: 0 0 15px rgba(255, 8, 68, 0.3);
+}
+
+.jedi-text {
+    color: #4facfe;
+}
+
+.sith-text {
+    color: #ff0844;
+}
