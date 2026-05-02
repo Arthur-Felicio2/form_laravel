@@ -27,6 +27,13 @@ class ContatoController extends Controller
         return view('view_contatos', compact('contatos'));
     }
 
+    public function admin()
+    {
+        // Aqui também listamos todos, mas a view será a de administração
+        $contatos = Contato::orderBy('id', 'desc')->get();
+        return view('view_admin', compact('contatos'));
+    }
+
     public function edit($id)
     {
         // Busca o contato pelo ID ou retorna erro 404 automaticamente se não achar

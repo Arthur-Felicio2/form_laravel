@@ -1,30 +1,38 @@
 @extends('layout.site')
 
-@section('title', 'HoloRede - Contatos')
+@section('title', 'Tripulação Registrada - Star Wars')
 
 @section('content')
-<div class="min-h-screen p-8">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl text-center font-bold mb-10 sw-title">Registros da HoloRede</h2>
+<div class="row">
+    <div class="col s12">
+        <h3 class="center-align sw-title" style="margin-top: 40px; margin-bottom: 30px;">Registros da Galáxia</h3>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach ($contatos as $contato)
-            <div class="card-sw p-6 rounded-lg flex flex-col items-center text-center {{ isset($contato['faccao']) && in_array($contato['faccao'], ['Sith', 'Imperio']) ? 'sith' : '' }}">
-
-                <h3 class="text-xl font-bold mb-2">{{ $contato['nome'] }}</h3>
-                <p class="text-gray-400 mb-2">Comlink: {{ $contato['cel'] }}</p>
-
-                <p class="text-sm font-semibold mt-auto {{ isset($contato['faccao']) && in_array($contato['faccao'], ['Sith', 'Imperio']) ? 'sith-text' : 'jedi-text' }}">
-                    [ {{ $contato['faccao'] ?? 'Desconhecido' }} ]
-                </p>
+    <div class="row">
+        @foreach($contatos as $contato)
+        <div class="col s12 m6">
+            <div class="card card-sw black-card z-depth-3 hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title font-bold" style="color: #FFE81F;">
+                        <i class="material-icons left">person</i> {{ $contato->nome }}
+                    </span>
+                    <p><i class="material-icons left tiny" style="margin-top: 4px;">call</i> Comlink: {{ $contato->cel }}</p>
+                    <br>
+                    <div class="chip grey darken-4 white-text" style="border: 1px solid #555;">
+                        Facção: {{ $contato->faccao }}
+                    </div>
+                </div>
             </div>
-            @endforeach
         </div>
+        @endforeach
+    </div>
 
-        <div class="mt-10 text-center">
-            <a href="/" class="inline-block py-2 px-6 rounded-md bg-gray-800 hover:bg-gray-700 text-white font-bold transition border border-gray-600">
-                <- Novo Registro
-                    </a>
+    <div class="row center-align" style="margin-top: 30px;">
+        <div class="col s6 right-align">
+            <a href="/" class="btn-flat waves-effect waves-light blue-text text-lighten-2"><i class="material-icons left">add</i> Novo Alistamento</a>
+        </div>
+        <div class="col s6 left-align">
+            <a href="/admin" class="btn-flat waves-effect waves-red red-text text-lighten-2"><i class="material-icons right">security</i> Comando Central</a>
         </div>
     </div>
 </div>
