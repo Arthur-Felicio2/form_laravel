@@ -1,8 +1,8 @@
 @extends('layout.site')
 
-@section('title', 'Tripulação Registrada - Star Wars')
+@section('titulo', 'Tripulação Registrada - Star Wars')
 
-@section('content')
+@section('conteudo')
 <div class="row">
     <div class="col s12">
         <h3 class="center-align sw-title" style="margin-top: 40px; margin-bottom: 30px;">Registros da Galáxia</h3>
@@ -29,10 +29,10 @@
 
     <div class="row center-align" style="margin-top: 30px;">
         <div class="col s6 right-align">
-            <a href="/" class="btn-flat waves-effect waves-light blue-text text-lighten-2"><i class="material-icons left">add</i> Novo Alistamento</a>
+            <a href="{{ route('home') }}" class="btn-flat waves-effect waves-light blue-text text-lighten-2"><i class="material-icons left">add</i> Novo Alistamento</a>
         </div>
         <div class="col s6 left-align">
-            <a href="/admin" class="btn-flat waves-effect waves-red red-text text-lighten-2"><i class="material-icons right">security</i> Comando Central</a>
+            <a href="{{ route('admin.contatos') }}" class="btn-flat waves-effect waves-red red-text text-lighten-2"><i class="material-icons right">security</i> Comando Central</a>
         </div>
     </div>
 </div>
