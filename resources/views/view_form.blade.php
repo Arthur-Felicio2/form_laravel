@@ -9,7 +9,7 @@
             <div class="card-content white-text">
                 <h4 class="center-align sw-title" style="margin-bottom: 30px;">Alistamento Galáctico</h4>
 
-                <form action="{{ route('contato.salvar_publico') }}" method="post">
+                <form action="{{ route('contato.salvar_publico') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     
                     <div class="row">

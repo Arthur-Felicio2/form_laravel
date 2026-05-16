@@ -20,7 +20,7 @@
                 <table class="highlight responsive-table" style="color: #e0e0e0;">
                     <thead>
                         <tr>
-                            <th>Nome</th>
+                            <th>Foto</th> <th>Nome</th>
                             <th>Comlink</th>
                             <th>Facção</th>
                             <th class="center-align">Ações</th>
@@ -29,6 +29,14 @@
                     <tbody>
                         @foreach($rows as $row)
                         <tr>
+                            <td>
+                                @if($row->imagem)
+                                    <img src="{{ asset($row->imagem) }}" alt="{{ $row->nome }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 2px solid #555;">
+                                @else
+                                    <i class="material-icons medium">account_circle</i>
+                                @endif
+                            </td>
+                            
                             <td>{{ $row->nome }}</td>
                             <td>{{ $row->cel }}</td>
                             <td>

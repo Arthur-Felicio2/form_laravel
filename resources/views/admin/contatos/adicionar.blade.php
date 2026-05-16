@@ -11,7 +11,7 @@
                     <i class="material-icons">person_add</i> Novo Registro Galáctico
                 </h4>
 
-                <form action="{{ route('admin.contatos.salvar') }}" method="post">
+                <form action="{{ route('admin.contatos.salvar') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     
                     @include('admin.contatos._form')

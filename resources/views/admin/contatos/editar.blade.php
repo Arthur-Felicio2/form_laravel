@@ -11,7 +11,7 @@
                     <i class="material-icons">build</i> Modificar Registro
                 </h4>
 
-                <form action="{{ route('admin.contatos.atualizar', $linha->id) }}" method="post">
+                <form action="{{ route('admin.contatos.atualizar', $linha->id) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <input type="hidden" name="_method" value="put"> @include('admin.contatos._form')
 
